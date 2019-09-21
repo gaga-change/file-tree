@@ -1,0 +1,25 @@
+{
+  "name": "file-tree",
+  "version": "0.0.1",
+  "description": "获取目录树，深度搜索",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaga-change/file-tree.git"
+  },
+  "keywords": [
+    "目录树"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "author": "严俊东",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gaga-change/file-tree/issues"
+  },
+  "homepage": "https://github.com/gaga-change/file-tree#readme"
+}
