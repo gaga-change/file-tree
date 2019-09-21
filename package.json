@@ -1,5 +1,5 @@
 {
-  "name": "file-tree",
+  "name": "file-tree-simple",
   "version": "0.0.1",
   "description": "获取目录树，深度搜索",
   "main": "index.js",
@@ -11,7 +11,10 @@
     "url": "git+https://github.com/gaga-change/file-tree.git"
   },
   "keywords": [
-    "目录树"
+    "目录树",
+    "file",
+    "tree",
+    "children"
   ],
   "files": [
     "index.js"
