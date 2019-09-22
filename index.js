@@ -14,10 +14,10 @@ const fs = require('fs')
  */
 function findDirTree(pathName) {
   const files = []
-  if (!pathName || typeof pathName !== 'string') return null
+  if (!pathName || typeof pathName !== 'string') return { tree: null, files: [] }
   if (!fs.existsSync(pathName)) {
     console.error(`路径不存在【${pathName}】`)
-    return null
+    return { tree: null, files: [] }
   }
   const res = { pathName }
   const _ = (self) => {

@@ -1,6 +1,6 @@
 {
   "name": "file-tree-simple",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "获取目录树，深度搜索",
   "main": "index.js",
   "scripts": {
