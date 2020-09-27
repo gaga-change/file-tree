@@ -32,6 +32,16 @@ fileTree(__dirname) // {tree<Object>, files<Array>}
   files: ['E:\\GitHub\\file-tree-simple\\test\\index.js', ... ] }
 */
 
+// 过滤文件或目录
+fileTree(__dirname, {
+  fileFilter: ({ name }) => {
+    return path.extname(name + '') === '.js'
+  },
+  dirFilter: ({ name }) => {
+    return name !== '.cbd'
+  }
+})
+
 ```
 
 ## License
