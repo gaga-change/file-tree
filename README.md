@@ -21,7 +21,7 @@ $ npm i file-tree-simple --save
 ```js
 const fileTree = require('file-tree-simple')
 
-find(__dirname) // {tree<Object>, files<Array>}
+fileTree(__dirname) // {tree<Object>, files<Array>}
 
 /*
 输出内容格式：
