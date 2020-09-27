@@ -12,7 +12,8 @@ const fs = require('fs')
  * 获取目录树
  * @param {String} pathName 指定路径
  */
-function findDirTree(pathName) {
+function findDirTree(pathName, options) {
+  const { fileFilter, dirFilter } = options || {}
   const files = []
   if (!pathName || typeof pathName !== 'string') return { tree: null, files: [] }
   if (!fs.existsSync(pathName)) {
@@ -25,8 +26,19 @@ function findDirTree(pathName) {
     let stat = fs.statSync(pathName)
     self.isFile = stat.isFile()
     if (self.isFile) {
-      files.push(pathName)
+      if (fileFilter) {
+        if (fileFilter(self)) {
+          files.push(pathName)
+        }
+      } else {
+        files.push(pathName)
+      }
     } else {
+      if (dirFilter) {
+        if (!dirFilter(self)) {
+          return
+        }
+      }
       let sonArr = fs.readdirSync(pathName)
       if (sonArr.length) {
         self.children = []
